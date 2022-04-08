@@ -15,3 +15,10 @@ export const getRestaurants = async (searchTerm) => {
     console.log(error);
   }
 };
+
+export const getRestaurant = async (id) => {
+  try {
+    const response = await yelp.get(`/${id}`);
+    return response.data;
+  } catch (error) {}
+};
